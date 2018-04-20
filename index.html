@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+ <div id="div">back jump</div>
+<script>
+    var divM = document.getElementById("div");
+//    divM.onclick = function () {
+//        alert("ok")
+        pushHistory();
+       window.addEventListener("popstate", function(e) {
+        window.location = 'http://www.baidu.com'
+        }, false);
+        function pushHistory() {
+        var state = {
+        title: "title",
+        url: "#"
+        };
+        window.history.pushState(state, "title", "#");
+//        }
+    }
+</script>
+</body>
+
+
+</html>

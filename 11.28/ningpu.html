@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="top">
+			<div class="container">
+				<span class="left">服务热线：400-678-7000 (8:30-17:30)</span>
+				<div class="right">
+					<span class="left log">您好，<b>
+								#{if currUser != null} 
+									#{if currUserInfo?.reality_name}
+										${currUserInfo?.reality_name}
+									#{/if}
+									#{else}${currUser.name 
+
+                                            }#{/else}
+								#{/if}
+								
+							</b> 欢迎来到富利网！</span> #{if currUser == null}
+					<a class="left log" href="@{front.LoginAndRegisteCtrl.loginPre()}" target="" title="">登录</a>
+					<a class="left log" href="@{front.LoginAndRegisteCtrl.registerPre()}" target="" title="">免费注册</a>
+					#{/if} #{else}
+					<a class="left suername" href="@{front.account.MyAccountCtrl.homePre()}" target="" title="">${currUser?.name}</a>
+					<a class="left" href="@{front.LoginAndRegisteCtrl.loginOutPre()}" target="" title="">退出</a>
+					#{/else}
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

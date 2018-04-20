@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<link rel="stylesheet" href="css/details.css">
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" href="css/commons-min.css">
+		<link rel="stylesheet" href="css/detail_goods_wdp.css">
+		<link rel="stylesheet" href="css/detail_goods_new.css">
+		<title>详情</title>
+	</head>
+	<body>
+		<section>
+			<!--展示轮播-->
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="http://shopimg.weimob.com/55922076/Goods/1701030206328481.jpg@0e_640w_640h_0c_0i_0o_90Q_1x.src"></div>
+						<div class="swiper-slide"><img src="http://shopimg.weimob.com/55922076/Goods/1701030206328481.jpg@0e_640w_640h_0c_0i_0o_90Q_1x.src"></div>
+					</div>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination"></div>
+				</div>
+				 <!--商品基本信息开始-->
+                    <div class="goodsBase">
+                        <div id="goodsBasecon">
+                            <div id="Basescroller">
+                                <!--基本信息-->
+                                <div class="section_body info_basic">
+                                    <div class="tbox title_and_fav">
+                                        <div id="label_title" class="title" style="width: 100%;">
+                                            
+                                            组团滑雪+汉堡套餐
+                                        </div>
+                                        <div>
+                                            <div class="fav" id="icon_fav1">
+                                                <span class="icon_fav">&nbsp;</span>
+                                                <label>&nbsp;</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   <div class="tbox price_and_fav price_and_sale">
+                                        <div>
+                                            <div class="price">
+
+                                                <p class="tuan_price hidden " id="tuan_price">拼团价：<span id="Group_prices"></span></p>
+                                                <p class="WeChat_price" id="WeChat_price">微信价：<span id="label_price"><span id="label_price">￥<label>80</label>.00</span></span><span id="label_activityTag" class="label_activityTag vhidden"></span></p>
+                                                <p class="">原价:<span id="label_price_original" class="price_original">￥<label>100</label>.00</span></p>
+                                                
+                   
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                  
+
+
+                                </div>
+                                <!--优惠信息改版-->
+                                <div class="wrap_section wrap_act_list ">
+                                  
+                                    <div id="Discount" class="act_item wrap_arrow hidden ">
+                                        <span class="act_name">优惠</span>
+                                        <p class="act_cont text_overflow flex1">
+                                            <span class="act_tag">满减</span>满128元减10元，部分省市包邮包邮包包部分省市包邮包邮包包
+                                        </p>
+                                    </div>
+                                    <div id="Coupons" class="act_item wrap_arrow hidden">
+                                        <span class="act_name">领券</span>
+                                        <p class="act_cont text_overflow flex1">
+                                            <span class="act_tag">满100减20</span><span class="act_tag">满100减20</span>
+                                        </p>
+                                    </div>
+                                    <div id="CouponCode" class="act_item wrap_arrow hidden">
+                                        <span class="act_name">优惠码</span>
+                                        <p class="act_cont text_overflow flex1">
+                                            <span class="act_tag">满减</span>订单活动商品减123.00元，无门槛使用
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- 一元夺宝入口 -->
+                                <div class="one-dollar-snatch border_b" id="one_dollar_snatch" style="display: none;">
+                                    <div class="relative"><span class="snatch-icon align_center">夺</span>全民夺宝<span id="snatch_join_msg">即将开始</span></div>
+                                    <a class="skip_link block align_right" id="snatch_skip_link" href="javascript:;"><span id="snatch_start_msg">立即查看</span><span class="snatch-point-to">>></span></a>
+                                </div>
+                                <!-- 送礼支持 -->
+                                <div class="send-gift send-gift-icon send-gift-icon-one border_b hidden" id="send_gift">
+                                  商品支持送礼，快送礼给Ta吧
+                                </div>
+                                  <div class="wrap_section wrap_trans flex text_overflow hidden" ><!--show1 show2 show 3-->
+                                    <a id="transZT" class="trans_item flex1" href="javascript:">
+                                        <i class="_icon icon_trans_zt"></i><span class="text_overflow">到店自提</span>
+                                    </a>
+                                    <div id="transCity" class="trans_item flex1 hidden">
+                                        <i class="_icon icon_trans_tc"></i><span class="text_overflow">同城限时达</span>
+                                    </div>
+                                    <div id="transDliver" class="trans_item flex1 hidden">
+                                        <i class="_icon icon_trans_ps"></i><span class="text_overflow">商家配送</span>
+                                    </div>
+                                </div>
+
+                                <!--请选择 尺码 颜色 以及数量-->
+                                <div class="section_body link_sku_dialog">
+                                    <a id="label_sku_title2" href="javascript:;" class="arrow">
+                                        <label>到店自取</label>
+                                    </a>
+                                </div>
+
+                                <!--进入店铺-->
+                            
+                                <div class="section_body wrap_shop flex">
+                                    <a class="wrap_shop_info flex flex1 text_overflow" href="/vshop/55922076/Index?ShopId=0&Skip=1">
+                                        <div class="shop_img flex0" style="background-image:url(http://wx.qlogo.cn/mmopen/scAWiciaAIqhVtHQmXZmWBLRalVJicvibicvbVgiaI8DHqtCWa1E4vpJYMy85ZojEVs1Wgib0AbIo2MIk3GicNTJDcCic1fQaOAAgLau9/0);"></div>
+                                        <div class="flex1 text_overflow flex-v-center">
+                                            <div class="shop_name text_overflow">泾川王母宫天池四季国际滑雪场</div>
+                                            <div class="shop_auth"><i>　</i>微信认证</div>
+                                        </div>
+                                    </a>
+                                    <div class="wrap_shop_tel flex0"><a class="_icon icon_tel" href="tel: 0933-5969299"></a></div>
+                                </div>
+
+
+                                <!--下拉样式-->
+                                <!--<div class="pullTest">继续拖动，查看详情</div>-->
+                                <div id="pullUp">
+                                    <span class="pullUpIcon"></span>
+                                </div>
+                                <!--商品基本内容结束-->
+                            </div>
+                        </div>
+                    </div>
+
+				
+		</section>
+	</body>
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			slidesPerView: 1,
+			spaceBetween: 0,
+			loop: true,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		});
+	</script>
+</html>

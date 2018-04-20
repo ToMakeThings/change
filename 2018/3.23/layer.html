@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0" />
+		<!--网站开启对 web app 程序的支持-->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<title></title>
+	</head>
+
+	<body>
+		<button>点击</button>
+	</body>
+	<script src="jquery.min.js"></script>
+	<script src="layer/layer.js"></script>
+	<script>
+		$("button").click(function() {
+			//询问框
+			layer.confirm('您确认租用么？', {
+				btn: ['确认', '取消'], //按钮
+			}, function() {
+				var index=layer.open();
+				layer.close(index);
+			}, function() {
+			});
+		})
+	</script>
+
+</html>

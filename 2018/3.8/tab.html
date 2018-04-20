@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul class="ul-list">
+			<li class="active">
+				<img />
+				<p>title1</p>
+			</li>
+			<li>
+				<img />
+				<p>title2/p>
+			</li>
+			<li>
+				<img />
+				<p>title3</p>
+			</li>
+			<li>
+				<img />
+				<p>title4</p>
+			</li>
+			
+		</ul>
+		<div class="div-list">
+			<div>对应内容1</div>
+			<div>对应内容2</div>
+			<div>对应内容3</div>
+			<div>对应内容4</div>
+		</div>
+	</body>
+	<script src="jq.js"></script>
+	<script>
+		/*注意 首先要写一个 active 的 样式   给他定义一个颜色 也就是要切换的颜色*/
+		$(function(){
+			$("ul-list li").click(function(){
+				/*或取下标*/
+				var index=$(this).index();
+				/*获取标题*/
+				var title=$(this).children("p").html();
+				/*点击切换active 更新颜色*/ 
+				$(this).addClass("active").siblings().removeClass("active");
+				
+				/*换图片*/
+				$(".ul-list li").eq(0).attr("src","旧的（灰色）图片地址");
+				$(".ul-list li").eq(1).attr("src","旧的（灰色）图片地址");
+				$(".ul-list li").eq(2).attr("src","旧的（灰色）图片地址");
+				$(".ul-list li").eq(3).attr("src","旧的（灰色）图片地址");
+				if(index==0){
+			      	$(".ul-list li").eq(0).attr("src","图标1  新的（橙色）图片地址");
+				}else if(index==1){
+					$(".ul-list li").eq(1).attr("src","图标2 新的（橙色）图片地址");
+				}else if(index==2){
+					$(".ul-list li").eq(2).attr("src","图标3 新的（橙色）图片地址");
+				}else if(index==3){
+					$(".ul-list li").eq(3).attr("src","图标4 新的（橙色）图片地址");
+				}
+				/*点击切换对应的内容*/ 
+				$(".div-list div").eq(index).show().siblings().hide();
+				/*展示内容模块*/
+				$(".div-list div").eq(index).html(title);
+				
+			})
+		})
+	</script>
+</html>

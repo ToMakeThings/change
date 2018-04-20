@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <title>菜鸟教程(runoob.com)</title>
+            <style>
+                ul.pagination {
+                    display: inline-block;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                ul.pagination li {display: inline;}
+
+                ul.pagination li a {
+                    color: black;
+                    float: left;
+                    padding: 8px 16px;
+                    text-decoration: none;
+                }
+
+                ul.pagination li a.active {
+                    background-color: #4CAF50;
+                    color: white;
+                }
+
+                ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+            </style>
+        </head>
+<body>
+
+<h2>点击及鼠标悬停分页样式</h2>
+<p>移动鼠标的分页的数字上。</p>
+<ul class="pagination">
+    <li class="fh"><a >«</a></li>
+    <li><a >1</a></li>
+    <li><a >2</a></li>
+    <li><a >3</a></li>
+    <li><a >4</a></li>
+    <li><a >5</a></li>
+    <li><a >6</a></li>
+    <li><a >7</a></li>
+    <li class="fh"><a >»</a></li>
+</ul>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+
+    $(".pagination li").click(function(){
+
+        var index=$(this).index();
+
+        $(this).siblings().find("a").removeClass("active");
+        $(this).find("a").addClass("active");
+    })
+</script>
+
+
+</body>
+</html>

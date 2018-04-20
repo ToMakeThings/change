@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{margin: 0;padding: 0;}
+			ul,li{
+				list-style: none;
+			}
+			.ul-wrap{
+				width:100%;
+				height: auto;
+			}
+			.ul-wrap>li{
+				width: 100%;
+				background: salmon;
+				border-bottom: 2px solid #000000;
+			}
+			.ul-group{
+				width: 100%;
+			}
+			.ul-group>li{
+				width: 16.6%;
+				text-align: center;
+				float: left;
+				background: sandybrown;
+			} 
+			/*左箭头*/
+        
+        .left-arrow1,.left-arrow2{
+            width:0;
+            height:0;
+            display:block;
+            position:absolute;
+            left:0;
+            top:0;
+            z-index:5;/*兼容ie8-*/
+            border-top:10px transparent dashed;
+            border-left:10px transparent dashed;
+            border-bottom:10px transparent dashed;
+            border-right:10px white solid;
+            overflow:hidden;
+        }
+        .left-arrow1{
+            border-right:10px blue solid;
+        }
+        .left-arrow2{
+            left:1px;/*重要*/
+            border-right:10px white solid;
+        }
+		</style>
+	</head>
+	<body>
+		
+		<!--<ul class="ul-wrap">
+			<li>
+				<ul class="ul-group">
+					<li>项目</li>
+					<li>投资金额</li>
+					<li>还本息费方式</li>
+					<li>投资事件</li>
+					<li>操作</li>
+					<li>项目</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="ul-group">
+					<li>项目</li>
+					<li>项目</li>
+					<li>项目</li>
+					<li>项目</li>
+					<li>项目</li>
+					<li>项目</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="ul-group">
+					<li>项目</li>
+					<li>项目</li>
+					<li>项目</li>
+					<li>项目</li>
+					<li>项目</li>
+					<li>项目</li>
+				</ul>
+			</li>
+			
+		</ul>-->
+		
+	 
+    <div class="arrow-left arrow-box" >
+        <b class="left"><i class="left-arrow1"></i><i class="left-arrow2"></i></b>
+    </div>
+	</body>
+</html>

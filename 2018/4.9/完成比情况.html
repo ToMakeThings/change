@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+	<head>
+		<meta charset="UTF-8">
+		<title>完成比情况</title>
+		<link rel="stylesheet" href="css/reset.css" />
+	</head>
+	<body style="height: 100%; margin: 0;padding:30px";>
+		<div id="wrap" style="width: 700px;height: 100%;margin: 0 auto;">
+			<div id="container" style="height: 100%"></div>
+		</div>
+	</body>
+	<script src="js/echarts.min.js"></script>
+<script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+app.title = '坐标轴刻度与标签对齐';
+
+option = {
+   title:{
+		text: '我为祖国学滑冰（北京市2017年学滑冰完成度情况）',
+		x:'center',
+		y:'top',
+		textStyle: {
+            fontSize: 20,
+            fontWeight: 'bolder',
+            color: '#3398db'          // 主标题文字颜色
+        },
+	},
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+       /* data:['完成']*/
+    },
+    grid: {
+        left: '3%',
+        right: '8%',
+        bottom: '10%',
+        top:"20%",
+        containLabel: true
+    },
+    toolbox: {
+        feature: {
+            /*saveAsImage: {}*/
+        }
+    },
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        name:'月份',
+        data: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月']
+    },
+    yAxis: {
+        type: 'value',
+        name:'单位：(万人)'
+    },
+    series: [
+       
+        {
+            name:'完成',
+            type:'line',
+            stack: '总量1',
+            data:[200.7, 210.8, 220.84, 240.98, 400.3, 600.4, 700.8,900.7,1000.3,1100,1500.3,1600.4],
+            label: {
+                normal: {
+                    show: true,
+                    position: 'top'
+                }
+            },
+        }
+         
+   
+    ]
+};
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../Css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="../Css/style.css" />
+    <script type="text/javascript" src="../Js/jquery.js"></script>
+    <script type="text/javascript" src="../Js/jquery.sorted.js"></script>
+    <script type="text/javascript" src="../Js/bootstrap.js"></script>
+    <script type="text/javascript" src="../Js/ckform.js"></script>
+    <script type="text/javascript" src="../Js/common.js"></script>
+
+ 
+
+    <style type="text/css">
+        body {
+            padding-bottom: 40px;
+        }
+        .sidebar-nav {
+            padding: 9px 0;
+        }
+
+        @media (max-width: 980px) {
+            /* Enable use of floated navbar text */
+            .navbar-text.pull-right {
+                float: none;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+	
+	
+<form action="#" class="definewidth m20">
+	
+  选择广告：
+    <select name="" class="m10">
+    	<option value="">请选择</option>
+    </select>
+    <p class="ADD">
+
+    
+    
+        所属地区：
+    <select name="" class="m10">
+    	<option value="">请选择</option>
+    	<option value="">河北省</option>
+    	<option value="">2</option>
+    	<option value="">3</option>
+    </select>
+       省
+    <select name="" class="m10">
+    	<option value="">请选择</option>
+    	<option value="">石家庄市</option>
+    	<option value="">2</option>
+    	<option value="">3</option>
+    	<option value="">4</option>
+    </select>
+    市
+    <button class="btn btn-success ml10" id="add">添加</button>
+    </p>
+      <p class="ADD">
+   所属类目：
+    <select name="" class="m10">
+    	<option value="">请选择</option>
+    	<option value="">四方</option>
+    	<option value="">2</option>
+    </select>&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <select name="" class="m10">
+    	<option value="">请选择</option>
+    	<option value="">嗯嗯</option>
+    	<option value="">2</option>
+    </select>&nbsp;&nbsp;&nbsp;&nbsp;
+    <select name="" class="m10">
+    	<option value="">请选择</option>
+    	<option value="">封顶</option>
+    	<option value="">2</option>
+    </select>
+    </p>
+     <div class="list" style="width: 350px; height: 205px; margin-left: 70px; line-height: 50px; overflow: hidden; margin-bottom: 15px;"></div>
+    <p id="addto">
+      上架时间：
+    <select name="" class="m10">
+    	<option value="">请选择</option>
+    </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      下架时间：
+    <select name="" class="m10">
+    	<option value="">请选择</option>
+    </select>
+    </p>
+    <p>
+       状态：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <select name="" class="m10">
+    	<option value="">请选择</option>
+    </select>
+    </p>
+    <p class="m20">
+    	  <button type="submit" class="btn btn-primary ml60">确定</button>  
+    	  <button type="submit" class="btn btn-success ml60">取消</button>
+    </p>
+</form>
+</body>
+</html>
+<script src="../11.1/jquery-2.2.0.js"></script>
+<script>
+	
+    $(function () {       
+		$('#backid').click(function(){
+				window.location.href="index.html";
+		 });
+
+    });
+ 
+ $("#add").bind('click',function(event){
+ 	var addd=$(".ADD option:selected").text()+'<button class="btn btn-danger del" id="del"style=" margin-left: 20px; ">删除</button>'+'</br>';
+    $(".list").append(addd);
+    $(".del").bind('click',function(){
+     var index=$(this).index();  
+ 	 $(".list").children(".del").eq(index).remove().prev().remove();
+ 	})
+ })
+	
+
+</script>

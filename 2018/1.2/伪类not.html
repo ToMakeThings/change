@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+	div{
+		height: 100px;
+		border: 1px solid #0000FF;
+	}
+	*{margin: 0;padding: 0;}
+    .nav li{
+		height: 200px;
+		background: sandybrown;
+	}	 
+	.nav li:not(:last-child) {
+        border-bottom: 10px solid #000;
+     }
+ 
+	</style>
+	<body>
+		<div id="one"></div>
+		<!--<Ul class="nav">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</Ul>-->
+	</body>
+	<script>
+		var one=document.getElementById("one");
+		one.onclick=function(e){
+			e=e||event;
+			console.log(e);
+			alert(e)
+		}
+	</script>
+	　 
+</html>

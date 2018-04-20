@@ -1,0 +1,14 @@
+@import url("reset.css");
+body{
+	font-size: 62.5%;
+}
+#wrap{
+	padding:50px 0;
+	width:992px;
+	margin: 0 auto;
+	background:#eee;
+}
+.formBox{
+	padding:20px;
+}
+@media only screen and (min-width: 481px)

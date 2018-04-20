@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div>
+			DIV:
+			<div id="msgdiv" style="border:1px #f00 solid; width:300px; height:100px;" contenteditable="true"></div>
+		</div>
+		<div>
+			<button onclick="test1()">插入内容</button>
+		</div>
+	</body>
+
+</html>
+<script>
+	function test1() {
+		var div = document.getElementById("msgdiv");
+		div.innerHTML += "这是测试";
+		var range = document.createRange();
+		var len = div.childNodes.length;
+		range.setStart(div, len);
+		range.setEnd(div, len);
+		getSelection().addRange(range);
+		div.focus();
+	}
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script src="jquery-2.2.0.js"></script>
+<script>
+    /*  var Ajax = {
+            get: function (url, fn) {
+                var xhr = new XMLHttpRequest();  // XMLHttpRequest对象用于在后台与服务器交换数据          
+                xhr.open('GET', url, true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200 || xhr.status == 304) { // readyState == 4说明请求已完成
+                        fn.call(this, xhr.responseText);  //从服务器获得数据
+                    }
+                };
+                xhr.send();
+            },
+            post: function (url, data, fn) {         // datat应为'a=a1&b=b1'这种字符串格式，在jq里如果data为对象会自动将对象转成这种字符串格式
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", url, true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");  // 添加http头，发送信息至服务器时内容编码类型
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 304)) {  // 304未修改
+                        fn.call(this, xhr.responseText);
+                    }
+                };
+                xhr.send(data);
+            }
+        }  */
+        var number=10;
+        var name=1;
+     /*    Ajax.get("http://s.music.qq.com/fcgi-bin/music_search_new_platform?t=0&n="+number+"&aggr=1&cr=1&loginUin=0&format=json&inCharset=GB2312&outCharset=utf-8¬ice=0&platform=jqminiframe.json&needNewCode=0&p=1&catZhida=0&remoteplace=sizer.newclient.next_song&w="+name,function(data){
+            console.log(data);
+        }) */
+       $.ajax({
+           url:"https://blog.csdn.net/wzx19840423/article/details/47811559",
+           type:"get",         
+           success:function(data){
+               console.log(data);
+               alert();
+           }
+
+
+       })
+</script>
+</html>

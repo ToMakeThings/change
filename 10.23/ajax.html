@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var imgUpload = {
+        //ajax请求数据
+        method:function(murl,mdata,method,success){
+            $.ajax({
+                type: method,
+                url: murl,
+                dataType : "jsonp",
+                data: mdata,
+                timeout: 20000,
+                error: function (data) {
+                    console.log(data);
+                    alert("请求失败");
+                },
+                success: function (data) {
+                    //console.log(data);
+                    success?success(data):function(){};
+                }
+            });
+        }
+    }
+
+    //调用
+    imgUpload.method("url","","get",function (data) {
+        if(data.code == 0){
+            alert(data);
+        }else{
+            alert("请求失败");
+        }
+    });
+</script>
+</html>

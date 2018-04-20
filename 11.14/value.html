@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="date" id="one"/>
+		<input type="date" id="two"/>
+		<button id="btn">钱坤大闹一</button>
+	</body>
+	<script src="../11.1/jquery-2.2.0.js"></script>
+	<script>
+		$("#btn").click(function(){
+			var one=$("#one").val();
+			var two=$("#two").val();
+			
+			$("#one").attr("val",two)
+			$("#two").attr("val",one)
+			$("#one").val(two)
+			$("#two").val(one)
+		})
+	</script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+
+</style>
+</body>
+<script>
+
+
+    var Li=$(".main_textUl li");
+    var Jian=$(".jian");
+    for (var i=0;i<Li.length-1;i++){
+        Li.eq(i).css("background","")
+    }
+    for (var i=0;i<Jian.length-1;i++){
+        Jian.eq(i).hide();
+    }
+    Jian.eq(0).show();
+    Li.eq(0).css("background","#25ADA4");
+
+
+    //按点击左侧自动获取内容并渲染到右侧标题头部
+
+
+    $(".main_textUl li").hide();
+    $(".jian").eq(1).hide();
+    $(".jian").eq(2).hide();
+    $(".jian").eq(3).hide();
+
+
+    $(".nameselect a").click(function(){
+        var index=$(this).index();
+        var jian=$(".jian");
+        $(this).parent().parent().parent().find(".main_textUl li").eq(index).show();
+        $(this).parent().parent().parent().find(".box").hide().eq(index).show();//返回上一层，在下面查找css名为box隐藏，然后选中的显示
+        $(this).parent().parent().parent().find(jian).hide().eq(index).show();
+        $(this).parent().parent().parent().find(".main_textUl li").eq(index).css("background","#25ADA4").siblings().css("background","");
+
+    })
+
+
+
+
+    $(".box:first").show();    //为每个BOX的第一个元素显示
+    $(".main_textUl li ").click(function(){
+
+        var index=$(this).index();
+        $(this).parent().parent().parent().find(".box").hide().eq(index).show(); //返回上一层，在下面查找css名为box隐藏，然后选中的显示
+        $(this).addClass("hover").css("background","#25ADA4").siblings().removeClass("hover").css("background",""); //li标签显示，同辈元素隐藏
+    })
+
+</script>
+</html>
